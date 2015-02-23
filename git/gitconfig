@@ -125,3 +125,6 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	email = svdberg@me.com
+	name = Sander van den Berg

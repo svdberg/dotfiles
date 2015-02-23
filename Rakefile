@@ -9,6 +9,28 @@ task :install => [:submodule_init, :submodules] do
   puts "Welcome to YADR Installation."
   puts "======================================================"
   puts
+<<<<<<< HEAD
+=======
+  # this has all the linkables from this directory.
+  linkables = []
+  linkables += Dir.glob('git/*') if want_to_install?('git')
+  linkables += Dir.glob('irb/*') if want_to_install?('irb/pry')
+  linkables += Dir.glob('ruby/*') if want_to_install?('ruby (gems)')
+  linkables += Dir.glob('vimify/*') if want_to_install?('vimification of mysql/irb/command line')
+  linkables += Dir.glob('{vim,vimrc}') if want_to_install?('vim')
+  linkables += Dir.glob('tmux.conf') if want_to_install?('tmux')
+  linkables += Dir.glob('zsh/zshrc') if want_to_install?('zsh')
+  Rake::Task['zsh_themes'].invoke
+
+  skip_all = false
+  overwrite_all = false
+  backup_all = false
+
+  linkables.each do |linkable|
+    file = linkable.split('/').last
+    source = "#{ENV["PWD"]}/#{linkable}"
+    target = "#{ENV["HOME"]}/.#{file}"
+>>>>>>> Tweaks to make it work again
 
   install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
   install_rvm_binstubs
