@@ -9,8 +9,6 @@
 # Don't change. The following determines where YADR is installed.
 yadr=`find -L ~ -type file -maxdepth 2 -name .yadr | head | sed 's:\.yadr\/::'`
 
-[[ -s $(/opt/boxen/homebrew/bin/brew --prefix)/etc/profile.d/autojump.sh ]] && . $(/opt/boxen/homebrew/bin/brew --prefix)/etc/profile.d/autojump.sh
-
 # Source oh-my-zsh if it is installed.
 if [[ -d $HOME/.oh-my-zsh ]]; then
   # Path to your oh-my-zsh configuration.
