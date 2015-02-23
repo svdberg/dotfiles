@@ -309,3 +309,7 @@
 [submodule "vim/bundle/skwp-vim-powerline"]
 	path = vim/bundle/skwp-vim-powerline
 	url = https://github.com/skwp/vim-powerline.git
+  ignore = dirty
+[submodule "vim/bundle/dag-vim2hs"]
+	path = vim/bundle/dag-vim2hs
+	url = https://github.com/dag/vim2hs
