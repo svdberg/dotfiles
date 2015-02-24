@@ -313,3 +313,6 @@
 [submodule "vim/bundle/dag-vim2hs"]
 	path = vim/bundle/dag-vim2hs
 	url = https://github.com/dag/vim2hs
+[submodule "vim/bundle/eagletmt-neco-ghc"]
+	path = vim/bundle/eagletmt-neco-ghc
+	url = https://github.com/eagletmt/neco-ghc

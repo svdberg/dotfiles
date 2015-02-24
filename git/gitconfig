@@ -111,7 +111,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
 [advice]
   statusHints = false
 [diff]
@@ -128,3 +128,10 @@
 [user]
 	email = svdberg@me.com
 	name = Sander van den Berg
+
+[hub]
+protocol = https
+host = github.corp.ebay.com
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
