@@ -130,8 +130,11 @@
 	name = Sander van den Berg
 
 [hub]
-protocol = https
-host = github.corp.ebay.com
+  protocol = https
+  host = github.corp.ebay.com
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+  helper = /opt/boxen/bin/boxen-git-credential
+
+[include]
+  path = .gitconfig.user

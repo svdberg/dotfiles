@@ -9,8 +9,7 @@ task :install => [:submodule_init, :submodules] do
   puts "Welcome to YADR Installation."
   puts "======================================================"
   puts
-<<<<<<< HEAD
-=======
+
   # this has all the linkables from this directory.
   linkables = []
   linkables += Dir.glob('git/*') if want_to_install?('git')
@@ -30,7 +29,6 @@ task :install => [:submodule_init, :submodules] do
     file = linkable.split('/').last
     source = "#{ENV["PWD"]}/#{linkable}"
     target = "#{ENV["HOME"]}/.#{file}"
->>>>>>> Tweaks to make it work again
 
   install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
   install_rvm_binstubs

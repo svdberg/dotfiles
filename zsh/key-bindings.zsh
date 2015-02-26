@@ -9,16 +9,16 @@ bindkey '^r' history-incremental-search-backward    # [Ctrl-r] - Search backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
-bindkey ' ' magic-space                             # [Space] - do history expansion
+#bindkey ' ' magic-space                             # [Space] - do history expansion
 
-bindkey '^[[1;5C' forward-word                      # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word                     # [Ctrl-LeftArrow] - move backward one word
+#bindkey '^[[1;5C' forward-word                      # [Ctrl-RightArrow] - move forward one word
+#bindkey '^[[1;5D' backward-word                     # [Ctrl-LeftArrow] - move backward one word
 
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
-bindkey '^?' backward-delete-char                   # [Delete] - delete backward
-bindkey '^[[3~' delete-char                         # [fn-Delete] - delete forward
-bindkey '^[3;5~' delete-char
-bindkey '\e[3~' delete-char
+#bindkey '^?' backward-delete-char                   # [Delete] - delete backward
+#bindkey '^[[3~' delete-char                         # [fn-Delete] - delete forward
+#bindkey '^[3;5~' delete-char
+#bindkey '\e[3~' delete-char
 
 #make Ctrl-K behave like normal
 bindkey "^K" kill-line 
