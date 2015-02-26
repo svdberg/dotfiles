@@ -316,3 +316,6 @@
 [submodule "vim/bundle/eagletmt-neco-ghc"]
 	path = vim/bundle/eagletmt-neco-ghc
 	url = https://github.com/eagletmt/neco-ghc
+[submodule "vim/bundle/derekwyatt-vim-scala"]
+	path = vim/bundle/derekwyatt-vim-scala
+	url = https://github.com/derekwyatt/vim-scala
