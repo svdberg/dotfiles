@@ -47,6 +47,9 @@ alias lsg='ll | grep'
 alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 
+#sourcetree
+alias sourcetree='open . -a /Applications/SourceTree.app/'
+
 # vim using
 mvim --version > /dev/null 2>&1
 MACVIM_INSTALLED=$?
