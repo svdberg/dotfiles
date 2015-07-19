@@ -112,13 +112,58 @@ rake update
 ```
 
 ## What's included, and how to customize?
-<<<<<<< HEAD
 
 Read on to learn what YADR provides!
 
 ### [Homebrew](http://mxcl.github.com/homebrew/)
 
-=======
+Homebrew is _the missing package manager for OSX_. Installed automatically.
+
+We automatically install a few useful packages including ctags, git, macvim, hub, and the silver searcher ('ag')
+Note that our autocomplete plugin requires a MacVim that supports Lua. The installer knows how to install it, but if you had one installed before, you may need to manually remove your old MacVim.
+
+#### Install iTerm Solarized Colors
+YADR will install Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick Solarized Dark.
+
+#### Remap caps-lock to escape with PCKeyboardHack](http://pqrs.org/macosx/keyremap4macbook/pckeyboardhack.html)
+The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape.  If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
+
+#### Remap your Alfred or Spotlight to `Ctrl-Cmd-Space`
+This is so that you can use `Cmd-Space` to autocomplete in vim. This is much more friendly for your fingers than `Ctrl-n`.
+
+#### Set up a system wide hotkey for iTerm (Keys=>Hotkey)
+Recommended Cmd-Escape, which is really Cmd-Capslock.
+
+#### In iTerm, uncheck "Use Lion-style full screen" on General
+This will give you fast full screen windows that are switchable without switching to spaces.
+
+#### in MacVim, uncheck Prefer native fullscreen under Advanced settings
+Same as iTerm. The Lion style spaces navigation slows everything down for no reason.
+
+## If you want to run vim in terminal
+
+* Make sure you install Solarized colorscheme in your terminal!
+* If you don't want to use solarized terminal, then make sure you do this:
+
+      let g:yadr_using_unsolarized_terminal = 1
+      # in ~/.vimrc.before
+
+* If you want to use an alternate colorcheme like Gruvbox, then in your `~/.vimrc.after` do:
+
+      let g:yadr_disable_solarized_enhancements = 1
+      colorscheme base16-twilight
+
+### Upgrading
+
+Upgrading is easy.
+
+```bash
+cd ~/.yadr
+git pull --rebase
+rake update
+```
+
+## What's included, and how to customize?
 
 Read on to learn what YADR provides!
 
