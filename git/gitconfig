@@ -34,7 +34,7 @@
   ammend = commit --amend           # ammend your last commit
 
   # checkout
-  co = checkout                     # checkout
+  co = checkout
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 
   # cherry-pick
@@ -79,7 +79,7 @@
 
   # status
   s = status                        # status
-  st = status                       # status
+  st = status -sb
   stat = status                     # status
 
   # tag
@@ -117,6 +117,7 @@
 [diff]
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
+  tool = icdiff
   mnemonicprefix = true
 	algorithm = patience
 [rerere]
@@ -126,7 +127,8 @@
 [include]
   path = .gitconfig.user
 [user]
-	email = svdberg@me.com
+  #email = svandenberg@marktplaats.nl
+  email = svandenberg@ebay.com
 	name = Sander van den Berg
 
 [hub]
@@ -145,6 +147,16 @@
 [github]
 	user = svdberg
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+[alias]
+  showtool = "!f() { git difftool $1^ $1; }; f"
+  added = difftool --cached
+[difftool]
+  prompt = false
+[difftool "icdiff"]
+  cmd = /opt/boxen/homebrew/bin/icdiff --line-numbers $LOCAL $REMOTE
+[pager]
+  difftool = true
