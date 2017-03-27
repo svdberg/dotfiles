@@ -9,6 +9,7 @@ bindkey '^r' history-incremental-search-backward    # [Ctrl-r] - Search backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
+<<<<<<< HEAD
 #bindkey ' ' magic-space                             # [Space] - do history expansion
 
 #bindkey '^[[1;5C' forward-word                      # [Ctrl-RightArrow] - move forward one word
@@ -22,3 +23,10 @@ bindkey '^e' end-of-line
 
 #make Ctrl-K behave like normal
 bindkey "^K" kill-line 
+=======
+# Make numpad enter work
+bindkey -s "^[Op" "0"
+bindkey -s "^[Ol" "."
+bindkey -s "^[OM" "^M"
+
+>>>>>>> 5e30685db88a8bd6d93390d3ccc64d8438ab7f35
